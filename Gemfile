@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'custom_session', git: 'git@github.com:AirWick219/custom_session.git'
+gem 'custom_session', git: 'https://github.com/AirWick219/custom_session.git'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
