@@ -14,5 +14,21 @@ module RailsHttpMiddlewareIssue
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    #
+
+    ActiveSupport::Reloader.before_class_unload do
+      puts 'Before class unload'
+    end
+
+    ActiveSupport::Reloader.after_class_unload do
+      puts 'After class unload'
+    end
+
+    ActiveSupport::Reloader.to_run do
+      puts 'Reloading'
+    end
+    ActiveSupport::Reloader.to_complete do
+      puts 'DONE Reloading'
+    end
   end
 end

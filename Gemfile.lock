@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:AirWick219/custom_session.git
+  revision: 820f6b229c01e42ddd968c3bf68e3935b560ab16
+  specs:
+    custom_session (0.1.0)
+      rails (~> 5.1.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -178,6 +185,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  custom_session!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.7)
@@ -193,4 +201,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
