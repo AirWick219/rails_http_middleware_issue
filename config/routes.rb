@@ -4,6 +4,4 @@ Rails.application.routes.draw do
   root 'home#index'
 
   mount CustomSession::Engine => '/custom_session' unless Rails.env.production?
-
-  # resources :session, only: :create
 end

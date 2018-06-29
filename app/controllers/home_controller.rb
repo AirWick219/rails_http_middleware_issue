@@ -1,5 +1,5 @@
 class HomeController < ActionController::Base
   def index
-    @title = 'Hello'
+    @title = 'Now change something in home#index'
   end
 end

@@ -18,7 +18,7 @@ module Middlewares
       puts 'Session processing'
       request = Rack::Request.new(env)
       unless skip_request?(request)
-        http = Net::HTTP.new( "localhost", 3000)
+        http = Net::HTTP.new( request.host, request.port)
         http.open_timeout = @open_timeout
         http.read_timeout = @read_timeout
         request = Net::HTTP.const_get("Post").new("/custom_session/session")
