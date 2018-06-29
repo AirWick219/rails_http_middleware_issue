@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:AirWick219/custom_session.git
+  remote: https://github.com/AirWick219/custom_session.git
   revision: 820f6b229c01e42ddd968c3bf68e3935b560ab16
   specs:
     custom_session (0.1.0)
