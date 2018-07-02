@@ -15,7 +15,7 @@ module Middlewares
 
 
     def call(env)
-      puts 'Session processing'
+      puts "Session processing, Thread Id: #{Thread.current.object_id}"
       request = Rack::Request.new(env)
       unless skip_request?(request)
         http = Net::HTTP.new( request.host, request.port)

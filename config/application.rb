@@ -18,18 +18,18 @@ module RailsHttpMiddlewareIssue
     config.middleware.insert_before Rack::Sendfile, ActionDispatch::DebugLocks
 
     ActiveSupport::Reloader.before_class_unload do
-      puts 'Before class unload'
+      puts "Before class unload, Thread Id: #{Thread.current.object_id}"
     end
 
     ActiveSupport::Reloader.after_class_unload do
-      puts 'After class unload'
+      puts "After class unload, Thread Id: #{Thread.current.object_id}"
     end
 
     ActiveSupport::Reloader.to_run do
-      puts 'Reloading'
+      puts "Reloading, Thread Id: #{Thread.current.object_id}"
     end
     ActiveSupport::Reloader.to_complete do
-      puts 'DONE Reloading'
+      puts "DONE Reloading, Thread Id: #{Thread.current.object_id}"
     end
   end
 end
